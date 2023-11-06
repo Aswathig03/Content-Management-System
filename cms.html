@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Content Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image:url('light.jpg');
+            background-size: cover; /* Adjust to 'contain', '100% auto', or other values as needed */
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header .logout-button {
+            float: right;
+            margin-right: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        form {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-image: url('water.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+            background-size: cover; /* Adjust to 'contain', '100% auto', or other values as needed */
+            background-repeat: no-repeat;
+        }
+
+        label, input, textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input, textarea {
+            width: 97%;
+            padding: 10px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Content Management System</h1>
+    </header>
+
+    <main>
+        <h2>Add Your Content Here</h2>
+        <form id="content-form" action="/add-content" method="POST">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter the title" required>
+
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" placeholder="Enter your name" required>
+
+            <label for="author">Domain</label>
+            <input type="text" id="domain" name="domain" placeholder="Enter your domain" required>
+
+            <label for="content">Content</label>
+            <textarea id="content" name="content" rows="10" placeholder="Enter the content" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <center> <button class="logout-button" onclick="logout()">Logout</button> </center>
+    </main>
+
+    <script>
+        function logout() {
+            alert("Logged out");
+            window.location.href="/index.html";
+
+        }
+    </script>
+</body>
+</html>
